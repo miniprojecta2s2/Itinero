@@ -12,16 +12,28 @@
         }
         body {
             font-family: Arial, sans-serif;
-            overflow: hidden;
         }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .video-section {
+            width: 50%;
+            position: relative;
+        }
+        .video-section video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+        }
+        .info-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
         }
         .navbar {
             position: absolute;
@@ -32,6 +44,7 @@
             align-items: center;
             padding: 15px 30px;
             background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
         .navbar ul {
             list-style: none;
@@ -45,44 +58,35 @@
             color: white;
             font-size: 18px;
         }
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-        }
-        .content h1 {
-            font-size: 50px;
-        }
-        .content p {
-            font-size: 20px;
-        }
     </style>
 </head>
 <body>
-    <video class="video-background" autoplay loop muted>
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
     <nav class="navbar">
         <div>
             <h2 style="color:white;">Travel Planner</h2>
         </div>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Explore</a></li>
+            <li><a href="Explore.html">Explore</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Create</a></li>
         </ul>
     </nav>
     
-    <div class="content">
-        <h1>Discover India</h1>
-        <p>Plan your perfect travel itinerary and explore the wonders of India.</p>
+    <div class="container">
+        <div class="video-section">
+            <video autoplay loop muted>
+                <source src="INDIA.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="info-section">
+            <div>
+                <h1>Discover India</h1>
+                <p>Plan your perfect travel itinerary and explore the wonders of India. From the Taj Mahal to Kerala's backwaters, experience the beauty and culture of this incredible country.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
